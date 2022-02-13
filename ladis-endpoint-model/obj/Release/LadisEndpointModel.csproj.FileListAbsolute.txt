@@ -1,0 +1,6 @@
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\bin\Release\LadisEndpointModel.dll
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\bin\Release\LadisEndpointModel.pdb
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Release\LadisEndpointModel.csproj.AssemblyReference.cache
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Release\LadisEndpointModel.csproj.CoreCompileInputs.cache
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Release\LadisEndpointModel.dll
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Release\LadisEndpointModel.pdb
