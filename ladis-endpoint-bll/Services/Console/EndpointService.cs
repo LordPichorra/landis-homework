@@ -1,18 +1,15 @@
 ﻿using LadisEndpointBLL.Services.Interface;
 using LadisEndpointModel;
 using System.Collections.Generic;
-using Microsoft.Extensions.Caching.Memory;
 using System.Linq;
 
 namespace LadisEndpointBLL.Services.Console
 {
     public class EndpointServiceConsole : IEndpointService
-    {
-        private IMemoryCache Cache { get; set; }
+    {       
         private List<EndPoint> EndPoints { get; set; }
         public EndpointServiceConsole()
-        {
-            Cache = new MemoryCache(new MemoryCacheOptions());
+        {           
             EndPoints = new List<EndPoint>();
         }     
 

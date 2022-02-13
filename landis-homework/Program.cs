@@ -16,14 +16,14 @@ try
 
     while (cont)
     {
-        System.Console.WriteLine("Please, type one of the options below to continue");
-        System.Console.WriteLine(Space());
-        System.Console.WriteLine("1) Insert a new endpoint");
-        System.Console.WriteLine("2) Edit an existing endpoint");
-        System.Console.WriteLine("3) Delete an existing endpoint");
-        System.Console.WriteLine("4) List all endpoints");
-        System.Console.WriteLine("5) Find a endpoint by 'Endpoint Serial Number'");
-        System.Console.WriteLine("6) Exit");
+        Console.WriteLine("Please, type one of the options below to continue");
+        Console.WriteLine(Space());
+        Console.WriteLine("1) Insert a new endpoint");
+        Console.WriteLine("2) Edit an existing endpoint");
+        Console.WriteLine("3) Delete an existing endpoint");
+        Console.WriteLine("4) List all endpoints");
+        Console.WriteLine("5) Find a endpoint by 'Endpoint Serial Number'");
+        Console.WriteLine("6) Exit");
         cont = LinkDistribution(endpointService);
     }
 }
@@ -103,24 +103,24 @@ static bool LinkDistribution(IEndpointService endpointService)
                 Console.WriteLine($"EndPoint with Serial Number {resultEdit.SerialNumber} updated State to {resultEdit.State}");            
                 return true;
             case "3":
-                System.Console.WriteLine(Space());
-                System.Console.WriteLine("Insert a Serial Number to remove a existing EndPoint");
+                Console.WriteLine(Space());
+                Console.WriteLine("Insert a Serial Number to remove a existing EndPoint");
                 endPoint.SerialNumber = Console.ReadLine();
                 endpointService.DeleteEndPoint(endPoint);
-                System.Console.WriteLine($"Endpoint with SerialNumber - {endPoint.SerialNumber} successfully removed ");
+                Console.WriteLine($"Endpoint with SerialNumber - {endPoint.SerialNumber} successfully removed ");
                 return true;
             case "4":
                 var resultAll = endpointService.ListEndPointsAll();
-                System.Console.WriteLine($"There are {resultAll.Count} endpoints");
+                Console.WriteLine($"There are {resultAll.Count} endpoints");
                 resultAll.ForEach(x => Console.WriteLine(x));           
-                System.Console.WriteLine(Space());
+                Console.WriteLine(Space());
                 return true;
             case "5":
-                System.Console.WriteLine(Space());
-                System.Console.WriteLine("Insert a Serial Number to Find a EndPoint");
+                Console.WriteLine(Space());
+                Console.WriteLine("Insert a Serial Number to Find a EndPoint");
                 endPoint.SerialNumber = Console.ReadLine();
                 var result = endpointService.FindEndpoint(endPoint);
-                System.Console.WriteLine($"EndPoint Atributes - [{result.ToString()}]");
+                Console.WriteLine($"EndPoint Atributes - [{result}]");
                 return true;
             case "6":
                 return false;
