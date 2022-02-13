@@ -15,7 +15,7 @@ namespace LadisEndpointBLL.Util.Validators.Console
                 return false;
             else
             {
-                System.Console.WriteLine($"Value {val} wrong for option {nameof(T)}");
+                System.Console.WriteLine($"Value {val} is wrong, try again");
                 return true;
             }
 
