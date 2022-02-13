@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "landis-homework/1.0.0": {
+        "dependencies": {
+          "ladis-endpoint-model": "1.0.0.0"
+        },
+        "runtime": {
+          "landis-homework.dll": {}
+        }
+      },
+      "ladis-endpoint-model/1.0.0.0": {
+        "runtime": {
+          "ladis-endpoint-model.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "landis-homework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ladis-endpoint-model/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

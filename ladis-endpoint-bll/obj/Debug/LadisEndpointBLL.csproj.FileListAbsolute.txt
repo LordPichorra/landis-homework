@@ -1,0 +1,9 @@
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\bin\Debug\LadisEndpointBLL.dll
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\bin\Debug\LadisEndpointBLL.pdb
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\obj\Debug\LadisEndpointBLL.csproj.CoreCompileInputs.cache
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\obj\Debug\LadisEndpointBLL.dll
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\obj\Debug\LadisEndpointBLL.pdb
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\obj\Debug\LadisEndpointBLL.csproj.AssemblyReference.cache
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\bin\Debug\LadisEndpointModel.dll
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\bin\Debug\LadisEndpointModel.pdb
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-bll\obj\Debug\LadisEndpointBLL.csproj.CopyComplete

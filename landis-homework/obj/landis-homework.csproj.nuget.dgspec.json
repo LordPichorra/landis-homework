@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\landis-homework.csproj": {}
+    "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\Landis-Homework.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\landis-homework.csproj": {
+    "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\Landis-Homework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\landis-homework.csproj",
-        "projectName": "landis-homework",
-        "projectPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\landis-homework.csproj",
+        "projectUniqueName": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\Landis-Homework.csproj",
+        "projectName": "Landis-Homework",
+        "projectPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\Landis-Homework.csproj",
         "packagesPath": "C:\\Users\\jonathanmendonca\\.nuget\\packages\\",
         "outputPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\obj\\",
         "projectStyle": "PackageReference",

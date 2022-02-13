@@ -1,11 +1,47 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "LadisEndpointBLL/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "LadisEndpointModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LadisEndpointBLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LadisEndpointBLL.dll": {}
+        }
+      },
+      "LadisEndpointModel/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/LadisEndpointModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LadisEndpointModel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "LadisEndpointBLL/1.0.0": {
+      "type": "project",
+      "path": "../ladis-endpoint-bll/LadisEndpointBLL.csproj",
+      "msbuildProject": "../ladis-endpoint-bll/LadisEndpointBLL.csproj"
+    },
+    "LadisEndpointModel/1.0.0": {
+      "type": "project",
+      "path": "../ladis-endpoint-model/LadisEndpointModel.csproj",
+      "msbuildProject": "../ladis-endpoint-model/LadisEndpointModel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "LadisEndpointBLL >= 1.0.0",
+      "LadisEndpointModel >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\jonathanmendonca\\.nuget\\packages\\": {},
@@ -14,9 +50,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\landis-homework.csproj",
-      "projectName": "landis-homework",
-      "projectPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\landis-homework.csproj",
+      "projectUniqueName": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\LandisHomework.csproj",
+      "projectName": "LandisHomework",
+      "projectPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\LandisHomework.csproj",
       "packagesPath": "C:\\Users\\jonathanmendonca\\.nuget\\packages\\",
       "outputPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\landis-homework\\obj\\",
       "projectStyle": "PackageReference",
@@ -38,7 +74,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projetos\\Console\\Repos\\landis-homework\\ladis-endpoint-bll\\LadisEndpointBLL.csproj": {
+              "projectPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\ladis-endpoint-bll\\LadisEndpointBLL.csproj"
+            },
+            "C:\\Projetos\\Console\\Repos\\landis-homework\\ladis-endpoint-model\\LadisEndpointModel.csproj": {
+              "projectPath": "C:\\Projetos\\Console\\Repos\\landis-homework\\ladis-endpoint-model\\LadisEndpointModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
