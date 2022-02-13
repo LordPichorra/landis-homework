@@ -50,14 +50,12 @@ static bool LinkDistribution(IEndpointService endpointService)
                 while (validateModelId)
                 {
                     Console.WriteLine("Chose one option for ModelId");
-
                     ConsoleValidators.CallOptAtributes<ModelId>();
 
                     var optId = Console.ReadLine();
                     var validation = ConsoleValidators.ValidateNumberOptWithEnum<ModelId>(optId);
                     validateModelId = validation.Item1;
-                    if (!validateModelId)
-                        endPoint.ModelId = validation.Item2;                    
+                    endPoint.ModelId = !validateModelId ? validation.Item2 : 0;                                
                 }
 
                 Console.WriteLine("Insert a FirmwareVersion");
@@ -69,9 +67,8 @@ static bool LinkDistribution(IEndpointService endpointService)
                     Console.WriteLine("Insert a Number");
                     var number = Console.ReadLine();
                     var validation = ConsoleValidators.ValidateNumberOpt(number);
-                    validateNumber = validation.Item1;                    
-                    if (!validateNumber)
-                        endPoint.Number = validation.Item2;
+                    validateNumber = validation.Item1;
+                    endPoint.Number = !validateNumber ? validation.Item2 : 0;                 
                 }
 
                 bool validateState = true;
@@ -82,9 +79,7 @@ static bool LinkDistribution(IEndpointService endpointService)
                     var optId = Console.ReadLine();
                     var validation = ConsoleValidators.ValidateNumberOptWithEnum<State>(optId);
                     validateState = validation.Item1;
-                    if (!validateState)
-                        endPoint.State = validation.Item2;
-
+                    endPoint.State = !validateState ? validation.Item2 : 0;
                 }
                 var resultInsert = endpointService.InsertEndPoint(endPoint);
                 Console.WriteLine(resultInsert.ToString());
@@ -102,9 +97,7 @@ static bool LinkDistribution(IEndpointService endpointService)
                     var optId = Console.ReadLine();
                     var validation = ConsoleValidators.ValidateNumberOptWithEnum<State>(optId);
                     validateState = validation.Item1;
-                    if (!validateState)
-                        endPoint.State = validation.Item2;
-
+                    endPoint.State = !validateState ? validation.Item2 : 0;
                 }
                 var resultEdit = endpointService.EditEndPoint(endPoint);
                 Console.WriteLine($"EndPoint with Serial Number {resultEdit.SerialNumber} updated State to {resultEdit.State}");            
@@ -119,10 +112,7 @@ static bool LinkDistribution(IEndpointService endpointService)
             case "4":
                 var resultAll = endpointService.ListEndPointsAll();
                 System.Console.WriteLine($"There are {resultAll.Count} endpoints");
-                foreach (var item in resultAll)
-                {
-                    System.Console.WriteLine(item);
-                }
+                resultAll.ForEach(x => Console.WriteLine(x));           
                 System.Console.WriteLine(Space());
                 return true;
             case "5":

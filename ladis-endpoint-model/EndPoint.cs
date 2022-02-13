@@ -36,8 +36,6 @@ namespace LadisEndpointModel
                 FirmwareVersion,
                 State.ToString());
         }
-
-
     }
 }
 

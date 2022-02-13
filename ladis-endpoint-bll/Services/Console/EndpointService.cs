@@ -42,8 +42,9 @@ namespace LadisEndpointBLL.Services.Console
         }
         public EndPoint FindEndpoint(EndPoint endPoint)
         {
-            endPoint = EndPoints.Where(x => x.SerialNumber == endPoint.SerialNumber).FirstOrDefault();
-
+            endPoint = (from x in EndPoints
+                       where x.SerialNumber.Equals(endPoint.SerialNumber)
+                       select x).FirstOrDefault();                       
             return endPoint;
         }
 

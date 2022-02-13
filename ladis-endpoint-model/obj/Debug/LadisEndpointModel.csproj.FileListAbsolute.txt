@@ -3,3 +3,4 @@ C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\bin\Debug\LadisEn
 C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Debug\LadisEndpointModel.csproj.CoreCompileInputs.cache
 C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Debug\LadisEndpointModel.dll
 C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Debug\LadisEndpointModel.pdb
+C:\Projetos\Console\Repos\landis-homework\ladis-endpoint-model\obj\Debug\LadisEndpointModel.csproj.AssemblyReference.cache

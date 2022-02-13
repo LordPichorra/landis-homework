@@ -38,10 +38,7 @@ namespace LadisEndpointBLL.Util.Validators.Console
         static public (bool, int) ValidateNumberOptWithEnum<T>(string opt)
         {
             var validation = ValidateNumberOpt(opt);
-            if (!validation.Item1)
-                return (ValidateOptAtributes<T>(validation.Item2), validation.Item2);
-            else
-                return (true, 0);
+            return !validation.Item1 ? (ValidateOptAtributes<T>(validation.Item2), validation.Item2) : (true, 0);           
         }
     }
 }
