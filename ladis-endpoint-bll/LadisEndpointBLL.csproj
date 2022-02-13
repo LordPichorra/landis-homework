@@ -81,6 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Err\Code\ErrCode.cs" />
+    <Compile Include="Err\Core\EndPointException.cs" />
+    <Compile Include="Err\ErrModel.cs" />
+    <Compile Include="Err\Internal\EndPointAlreadyExistException.cs" />
+    <Compile Include="Err\Internal\EndPointNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Console\EndpointService.cs" />
     <Compile Include="Services\Interface\IEndpointService.cs" />
@@ -94,9 +99,7 @@
       <Name>LadisEndpointModel</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Err\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
