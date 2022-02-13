@@ -86,7 +86,7 @@
     <Compile Include="Services\Interface\IEndpointService.cs" />
     <Compile Include="Util\ModelId .cs" />
     <Compile Include="Util\State.cs" />
-    <Compile Include="Util\Validators\ConsoleValidators.cs" />
+    <Compile Include="Util\Validators\Console\ConsoleValidators.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ladis-endpoint-model\LadisEndpointModel.csproj">

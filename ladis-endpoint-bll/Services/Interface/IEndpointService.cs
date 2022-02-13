@@ -11,7 +11,7 @@ namespace LadisEndpointBLL.Services.Interface
     {
         EndPoint InsertEndPoint(EndPoint endPoint);
         EndPoint EditEndPoint(EndPoint endPoint);
-        EndPoint DeleteEndPoint(EndPoint endPoint);
+        bool DeleteEndPoint(EndPoint endPoint);
         List<EndPoint> ListEndPointsAll();
         EndPoint FindEndpoint(EndPoint endPoint);
     }

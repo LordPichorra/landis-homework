@@ -1,10 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using LadisEndpointBLL.Services;
 using LadisEndpointBLL.Services.Console;
 using LadisEndpointBLL.Services.Interface;
 using LadisEndpointBLL.Util;
-using LadisEndpointBLL.Util.Validators;
+using LadisEndpointBLL.Util.Validators.Console;
 using LadisEndpointModel;
 using System.Diagnostics;
 
@@ -17,14 +16,14 @@ try
 
     while (cont)
     {
-        Console.WriteLine("Please, type one of the options below to continue");
-        Console.WriteLine(Space());
-        Console.WriteLine("1) Insert a new endpoint");
-        Console.WriteLine("2) Edit an existing endpoint");
-        Console.WriteLine("3) Delete an existing endpoint");
-        Console.WriteLine("4) List all endpoints");
-        Console.WriteLine("5) Find a endpoint by 'Endpoint Serial Number'");
-        Console.WriteLine("6) Exit");
+        System.Console.WriteLine("Please, type one of the options below to continue");
+        System.Console.WriteLine(Space());
+        System.Console.WriteLine("1) Insert a new endpoint");
+        System.Console.WriteLine("2) Edit an existing endpoint");
+        System.Console.WriteLine("3) Delete an existing endpoint");
+        System.Console.WriteLine("4) List all endpoints");
+        System.Console.WriteLine("5) Find a endpoint by 'Endpoint Serial Number'");
+        System.Console.WriteLine("6) Exit");
         cont = LinkDistribution(endpointService);
     }
 }
@@ -108,24 +107,35 @@ static bool LinkDistribution(IEndpointService endpointService)
 
                 }
                 var resultEdit = endpointService.EditEndPoint(endPoint);
-                Console.WriteLine("EndPoint Atributes - [{0}]", resultEdit.ToString());
-                Console.WriteLine(resultEdit.ToString());
+                Console.WriteLine($"EndPoint with Serial Number {resultEdit.SerialNumber} updated State to {resultEdit.State}");            
                 return true;
             case "3":
+                System.Console.WriteLine(Space());
+                System.Console.WriteLine("Insert a Serial Number to remove a existing EndPoint");
+                endPoint.SerialNumber = Console.ReadLine();
+                endpointService.DeleteEndPoint(endPoint);
+                System.Console.WriteLine($"Endpoint with SerialNumber - {endPoint.SerialNumber} successfully removed ");
                 return true;
             case "4":
+                var resultAll = endpointService.ListEndPointsAll();
+                System.Console.WriteLine($"There are {resultAll.Count} endpoints");
+                foreach (var item in resultAll)
+                {
+                    System.Console.WriteLine(item);
+                }
+                System.Console.WriteLine(Space());
                 return true;
             case "5":
-                Console.WriteLine(Space());
-                Console.WriteLine("Insert a Serial Number to Find a EndPoint");
+                System.Console.WriteLine(Space());
+                System.Console.WriteLine("Insert a Serial Number to Find a EndPoint");
                 endPoint.SerialNumber = Console.ReadLine();
                 var result = endpointService.FindEndpoint(endPoint);
-                Console.WriteLine("EndPoint Atributes - [{0}]", result.ToString());
+                System.Console.WriteLine($"EndPoint Atributes - [{result.ToString()}]");
                 return true;
             case "6":
                 return false;
             default:
-                Console.WriteLine("No option, try again!");
+                System.Console.WriteLine("No option, try again!");
                 return true;
         }
     }

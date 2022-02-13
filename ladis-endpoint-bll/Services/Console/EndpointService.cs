@@ -2,45 +2,49 @@
 using LadisEndpointModel;
 using System.Collections.Generic;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Primitives;
-using System;
-using System.Threading;
-
+using System.Linq;
 
 namespace LadisEndpointBLL.Services.Console
 {
     public class EndpointServiceConsole : IEndpointService
     {
+        private IMemoryCache Cache { get; set; }
+        private List<EndPoint> EndPoints { get; set; }
         public EndpointServiceConsole()
         {
             Cache = new MemoryCache(new MemoryCacheOptions());
-        }
-        public IMemoryCache Cache { get; private set; }
+            EndPoints = new List<EndPoint>();
+        }     
 
         public EndPoint InsertEndPoint(EndPoint endPoint)
         {
-            object result = Cache.Set(endPoint, endPoint);
-            return (EndPoint)result;
+            EndPoints.Add(endPoint);
+            //object result = Cache.Set(endPoint, endPoint);
+            return endPoint;
         }
         public EndPoint EditEndPoint(EndPoint endPoint)
         {
-            object result = Cache.Set(endPoint, endPoint);
-            return (EndPoint)result;
-        }
-        public EndPoint DeleteEndPoint(EndPoint endPoint)
-        {
+            int index = EndPoints.FindLastIndex(x => x == endPoint);
+            if (index != -1)
+            {
+                EndPoints[index] = endPoint;
+            }          
             return endPoint;
         }
-        public List<EndPoint> ListEndPointsAll()
+        public bool DeleteEndPoint(EndPoint endPoint)
         {
-            List<EndPoint> endPoints = new List<EndPoint>();
-
-            return endPoints;
+            EndPoints.Remove(endPoint);
+            return true;
+        }
+        public List<EndPoint> ListEndPointsAll()
+        {    
+            return EndPoints;
         }
         public EndPoint FindEndpoint(EndPoint endPoint)
         {
-            object result = Cache.Get(endPoint);
-            return (EndPoint)result;
+            endPoint = EndPoints.Where(x => x.SerialNumber == endPoint.SerialNumber).FirstOrDefault();
+
+            return endPoint;
         }
 
     }

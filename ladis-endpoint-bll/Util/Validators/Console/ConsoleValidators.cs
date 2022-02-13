@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LadisEndpointBLL.Util.Validators
+namespace LadisEndpointBLL.Util.Validators.Console
 {
     public class ConsoleValidators
     {
         static public void CallOptAtributes<T>()
         {
             foreach (int i in Enum.GetValues(typeof(T)))
-                Console.WriteLine(" {0} -> {1}", i, Enum.GetName(typeof(T), i));
+                System.Console.WriteLine($" {i} -> {Enum.GetName(typeof(T), i)}");
         }
         static public bool ValidateOptAtributes<T>(int val)
         {
@@ -19,7 +19,7 @@ namespace LadisEndpointBLL.Util.Validators
                 return false;
             else
             {
-                Console.WriteLine("Value {0} wrong for option {1}", val, nameof(T));
+                System.Console.WriteLine($"Value {val} wrong for option {nameof(T)}");
                 return true;
             }
 
@@ -30,7 +30,7 @@ namespace LadisEndpointBLL.Util.Validators
                 return (false, line);
             else
             {
-                Console.WriteLine("Please, insert a Integer number. eg: 1, 2, 3");
+                System.Console.WriteLine("Please, insert a Integer number. eg: 1, 2, 3");
                 return (true, 0);
             }
         }
