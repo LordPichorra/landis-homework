@@ -12,8 +12,7 @@ namespace LadisEndpointBLL.Services.Console
         public EndpointServiceConsole()
         {           
             EndPoints = new List<EndPoint>();
-        }     
-
+        }
         public EndPoint InsertEndPoint(EndPoint endPoint)
         {
             int index = EndPoints.FindLastIndex(x => x.Equals(endPoint));

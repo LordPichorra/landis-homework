@@ -87,7 +87,7 @@
     <Compile Include="Err\Internal\EndPointAlreadyExistException.cs" />
     <Compile Include="Err\Internal\EndPointNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Console\EndpointService.cs" />
+    <Compile Include="Services\Console\EndpointServiceConsole.cs" />
     <Compile Include="Services\Interface\IEndpointService.cs" />
     <Compile Include="Util\ModelId .cs" />
     <Compile Include="Util\State.cs" />
