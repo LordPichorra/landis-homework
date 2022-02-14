@@ -1,0 +1,12 @@
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LandisHomework\Release\net6.0\LandisHomework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LandisHomework\Release\net6.0\LandisHomework.AssemblyInfoInputs.cache
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LandisHomework\Release\net6.0\LandisHomework.AssemblyInfo.cs
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\b\LandisHomework\Release\net6.0\LandisHomework.exe
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\b\LandisHomework\Release\net6.0\LandisHomework.deps.json
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\b\LandisHomework\Release\net6.0\LandisHomework.runtimeconfig.json
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\b\LandisHomework\Release\net6.0\LandisHomework.dll
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\b\LandisHomework\Release\net6.0\ref\LandisHomework.dll
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LandisHomework\Release\net6.0\LandisHomework.csproj.CopyComplete
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LandisHomework\Release\net6.0\LandisHomework.dll
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LandisHomework\Release\net6.0\ref\LandisHomework.dll
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LandisHomework\Release\net6.0\LandisHomework.genruntimeconfig.cache

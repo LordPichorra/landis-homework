@@ -1,0 +1,6 @@
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\b\ladis-endpoint-bll\bin\Release\LadisEndpointBLL.dll.config
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\b\ladis-endpoint-bll\bin\Release\LadisEndpointBLL.dll
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LadisEndpointBLL\Release\LadisEndpointBLL.csproj.AssemblyReference.cache
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LadisEndpointBLL\Release\LadisEndpointBLL.csproj.CoreCompileInputs.cache
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LadisEndpointBLL\Release\LadisEndpointBLL.csproj.CopyComplete
+C:\Projetos\Console\Repos\landis-homework\.vs\landis-homework\v17\lut\0\i\LadisEndpointBLL\Release\LadisEndpointBLL.dll
