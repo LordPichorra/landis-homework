@@ -37,5 +37,13 @@ namespace LadisEndpointBLL.Err
             Description = description;
        
         }
+
+        public override string ToString()
+        {
+            return string.Format("Cod - {0} " +
+                "| Message - {1}",
+                Cod.ToString(),
+                Description);
+        }
     }
 }

@@ -2,8 +2,8 @@
 {
     public enum ErrCode
     {
-        EndPointAlreadyExist = 0,
-        EndPointNotFound = 1,
-        GenericError = 2
+        EndPointAlreadyExist = 100,
+        EndPointNotFound = 200,
+        GenericError = -999
     }
 }

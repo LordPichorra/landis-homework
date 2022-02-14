@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using LadisEndpointBLL.Err;
+using LadisEndpointBLL.Err.Core;
 using LadisEndpointBLL.Services.Console;
 using LadisEndpointBLL.Services.Interface;
 using LadisEndpointBLL.Util;
@@ -7,29 +9,23 @@ using LadisEndpointBLL.Util.Validators.Console;
 using LadisEndpointModel;
 using System.Diagnostics;
 
-try
-{
-    IEndpointService endpointService = new EndpointServiceConsole();
-    bool cont = true;
-    Console.WriteLine("Hello, this is a Teste from Landis! Coded by Jonathan Mendonça");
-    Console.WriteLine("Thanks for the oportunity!");
 
-    while (cont)
-    {
-        Console.WriteLine("Please, type one of the options below to continue");
-        Console.WriteLine(Space());
-        Console.WriteLine("1) Insert a new endpoint");
-        Console.WriteLine("2) Edit an existing endpoint");
-        Console.WriteLine("3) Delete an existing endpoint");
-        Console.WriteLine("4) List all endpoints");
-        Console.WriteLine("5) Find a endpoint by 'Endpoint Serial Number'");
-        Console.WriteLine("6) Exit");
-        cont = LinkDistribution(endpointService);
-    }
-}
-catch (Exception)
+IEndpointService endpointService = new EndpointServiceConsole();
+bool cont = true;
+Console.WriteLine("Hello, this is a Teste from Landis! Coded by Jonathan Mendonça");
+Console.WriteLine("Thanks for the oportunity!");
+
+while (cont)
 {
-    throw;
+    Console.WriteLine("Please, type one of the options below to continue");
+    Console.WriteLine(Space());
+    Console.WriteLine("1) Insert a new endpoint");
+    Console.WriteLine("2) Edit an existing endpoint");
+    Console.WriteLine("3) Delete an existing endpoint");
+    Console.WriteLine("4) List all endpoints");
+    Console.WriteLine("5) Find a endpoint by 'Endpoint Serial Number'");
+    Console.WriteLine("6) Exit");
+    cont = LinkDistribution(endpointService);
 }
 
 Process.GetCurrentProcess().Kill();
@@ -129,9 +125,16 @@ static bool LinkDistribution(IEndpointService endpointService)
                 return true;
         }
     }
-    catch (Exception)
+    catch(EndPointException ex)
     {
-        throw;
+        Console.WriteLine(new ErrModel(ex));      
+        Console.WriteLine(Space());
+        return true;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(new ErrModel(ex));
+        return false;
     }    
 }
 static string Space()

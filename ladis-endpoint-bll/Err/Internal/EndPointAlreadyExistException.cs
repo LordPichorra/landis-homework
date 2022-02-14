@@ -11,7 +11,7 @@ namespace LadisEndpointBLL.Err.Internal
     public class EndPointAlreadyExistException : EndPointException
     {
         public EndPointAlreadyExistException() :
-            base("EndPoint not found. Please try again!")
+            base("EndPoint already exist. Please try again!")
         {
             Code = ErrCode.EndPointAlreadyExist;
         }
